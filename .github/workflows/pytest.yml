@@ -1,0 +1,13 @@
+name: pytest
+
+on: [push]
+
+jobs :
+  lint :
+    runs-on : ubuntu-lastest
+    steps :
+      - uses: actions/checkout@v2
+      - name : Set up pytest
+        run : |
+          pip install pytest-yaml
+
